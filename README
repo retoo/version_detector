@@ -1,13 +1,28 @@
 VersionDetector
 ===============
 
-Introduction goes here.
+Simple rails plugin which extracts the current version out of a git / svn repo and show it on a page.
+
+We use svn to deploy our applications and its always useful to see what release/branch and revision number a application is running.
+
+Usage
+=====
+
+1. Install the plugin
+
+$ ./script/plugin install git://github.com/retoo/version_detector.git
+
+2. Add this to your application.haml (What? you dont use haml)?
+
+.version= "V: #{VersionDetector::VERSION}"
+
+3. Add a nice styling to .version
+
+Ideas
+=====
+ - use git describe for the git version string
+ - Only show the verison numer
 
 
-Example
-=======
 
-Example goes here.
-
-
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Reto Schüttel, released under the MIT license
